@@ -108,8 +108,8 @@ func main() {
 		}
 
 		// Write response to the output (file or terminal)
-		fmt.Fprintf(output, "Page: %d, Response: %s\n", page, string(body))
-
+		fmt.Fprintf(output, "%s\n", string(body))
+		
 		// Check if results are empty or if there's no meaningful update
 		results, ok := jsonResponse["results"].([]interface{})
 		if !ok || len(results) == 0 {
